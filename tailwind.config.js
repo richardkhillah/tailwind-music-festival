@@ -4,5 +4,5 @@ module.exports = {
   //  project, we will need to add each path.
   content: ["./src/**/*.{html,js}"],
   theme: {},
-  plugins: [],
+  plugins: [require("./plugins/openVarient")],
 };

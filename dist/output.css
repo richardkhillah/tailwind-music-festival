@@ -590,6 +590,10 @@ html {
   position: absolute;
 }
 
+.relative{
+  position: relative;
+}
+
 .sticky{
   position: sticky;
 }
@@ -598,12 +602,37 @@ html {
   top: 0px;
 }
 
+.top-\[62px\]{
+  top: 62px;
+}
+
+.left-0{
+  left: 0px;
+}
+
 .top-full{
   top: 100%;
 }
 
 .right-0{
   right: 0px;
+}
+
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -620,6 +649,18 @@ html {
 
 .h-1{
   height: 0.25rem;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .flex-1{
@@ -660,12 +701,20 @@ html {
   justify-content: flex-end;
 }
 
+.justify-center{
+  justify-content: center;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
 
 .whitespace-nowrap{
   white-space: nowrap;
+}
+
+.rounded-full{
+  border-radius: 9999px;
 }
 
 .rounded-b-md{
@@ -679,6 +728,11 @@ html {
 
 .border-none{
   border-style: none;
+}
+
+.bg-zinc-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
 
 .bg-pink-500{
@@ -706,6 +760,14 @@ html {
 
 .p-4{
   padding: 1rem;
+}
+
+.pr-4{
+  padding-right: 1rem;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-right{
@@ -744,6 +806,10 @@ html {
   text-decoration-line: underline;
 }
 
+.opacity-100{
+  opacity: 1;
+}
+
 .ring{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -752,6 +818,12 @@ html {
 
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-colors{
@@ -767,20 +839,15 @@ html {
 /* Base styles should only target html tags */
 
 /* Menu-item styling. Last resort because no front-end packaging
-   software used, e.g., react.js */
+   software used, e.g., react.js. This fix increases output.css bundle size
+    */
 
 .hover\:bg-white\/5:hover{
   background-color: rgb(255 255 255 / 0.05);
 }
 
-.hover\:bg-zinc-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
-}
-
-.hover\:text-zinc-500:hover{
-  --tw-text-opacity: 1;
-  color: rgb(113 113 122 / var(--tw-text-opacity));
+.hover\:bg-white\/10:hover{
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 .hover\:text-zinc-200:hover{
@@ -788,6 +855,51 @@ html {
   color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 
+.hover\:text-pink-200:hover{
+  --tw-text-opacity: 1;
+  color: rgb(251 207 232 / var(--tw-text-opacity));
+}
+
 .group:hover .group-hover\:block{
   display: block;
+}
+
+.group.open .group-open\:top-2{
+  top: 0.5rem;
+}
+
+.group.open .group-open\:-top-2{
+  top: -0.5rem;
+}
+
+.group.open .group-open\:block{
+  display: block;
+}
+
+.group.open .group-open\:rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group.open .group-open\:-rotate-45{
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group.open .group-open\:opacity-0{
+  opacity: 0;
+}
+
+.peer.open ~ .peer-open\:block{
+  display: block;
+}
+
+@media (min-width: 768px){
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
 }
