@@ -10,6 +10,7 @@
   <body>
     <main>
       <header class="text-zinc-200">
+
         <!-- Nav bar. Sticky to the top of the page (top-0) and backgroup gradient -->
         <nav class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500">
           <!-- items center specific to flex items -->
@@ -18,6 +19,19 @@
             <div class="font-bold text-2xl">
               tw:<span class="text-sky-900">mf</span>
             </div>
+          </div>
+          
+          <!-- Fill the width of the rest of the navbar. All items vertically centered
+                and justifed to the right. -->
+          <div class="flex-1 flex items-center justify-end">
+            <!-- Relative positioning so all children/sub-menus are absolutely positiond
+                to where the parent item. Flex bc we want ver/horiz alignment and hight-full
+                .-->
+            <!-- TODO: factor out these component classes -->
+            <div class="menu-item"><span>Home</span></div>
+            <div class="menu-item"><span>Lineup</span></div>
+            <div class="menu-item"><span>Tickets</span></div>
+            <div class="menu-item"><span>Support</span></div>
           </div>
         </nav>
       </header>
