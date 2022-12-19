@@ -41,15 +41,33 @@
           const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
           carousel.scrollLeft = carousel.scrollLeft + itemWidth;
         });
+
+        <!-- Dark/light-mode toggle -->
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+          if (document.body.classList.contains("dark")) {
+            document.body.classList.remove("dark");
+          } else {
+            document.body.classList.add("dark");
+          }
+        });
+        
       };
     </script>
   </head>
-  <body>
+  <body class="dark">
     <main class="bg-zinc-200 dark:bg-zinc-900">
       <header class="text-zinc-200">
 
+        <!-- Light/Dark toggle button -->
+        <div id="dark-mode-toggle"
+            class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+        </div>
+
         <!-- Nav bar. Sticky to the top of the page (top-0) and backgroup gradient -->
-        <nav class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500">
+        <nav class="z-10 sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500">
           <!-- items center specific to flex items -->
           <div class="flex items-center p-2 gap-2">
             <img src="./assets/images/logo-inverted.png" width="50" alt="">
@@ -160,6 +178,7 @@
       </header>
 
       <!-- HEADLINERS & CAROUSEL SECTION -->
+      <!-- Content wraper div for all content after header -->
       <div class="max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
         <h2>Headliners</h2>
         <p>Expereince the sonic delight from these made-up artists across 7 days that music fans
@@ -249,6 +268,26 @@
           </div>
         </div>
 
+        <!-- TICKETS TABLE SECTION -->
+        <h2 class="mt-20">Tickets</h2>
+        <table class="mt-5 table w-full border border-zinc-500 border-collapse">
+          <thead class="text-lg font-bold">
+            <td class="border border-zinc-500 p-3">Tickets</td>
+            <td class="border border-zinc-500 p-3">Price</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-zinc-500 py-2 px-3">Single Day Ticket</td>
+              <td class="border border-zinc-500 py-2 px-3">$25</td>
+            </tr>
+            <tr>
+              <td class="border border-zinc-500 py-2 px-3">7 Day Ticket</td>
+              <td class="border border-zinc-500 py-2 px-3">$100</td>
+            </tr>
+          </tbody>
+          <!-- Need custom css function to have caption display at the bottom of table -->
+          <caption class="caption-bottom">Once they're gone, they're gone</caption>
+        </table>
       </div>
     </main>
   </body>

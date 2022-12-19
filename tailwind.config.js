@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   // Set up the files to watch. If we build a larger
   //  project, we will need to add each path.
   content: ["./src/**/*.{html,js}"],
@@ -27,5 +28,6 @@ module.exports = {
   plugins: [
     require("./plugins/openVarient"),
     require("./plugins/animationDelay"),
+    require("./plugins/tableCaption"),
   ],
 };
