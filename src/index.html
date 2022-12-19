@@ -61,7 +61,7 @@
 
         <!-- Light/Dark toggle button -->
         <div id="dark-mode-toggle"
-            class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+            class="z-10 fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
           <i class="fa-solid fa-sun dark:hidden"></i>
           <i class="fa-solid fa-moon hidden dark:inline"></i>
         </div>
@@ -265,6 +265,88 @@
           <!-- Right Arrow -->
           <div id="next" class="text-5xl flex justify-center items-center cursor-pointer p-2 relative -top-8">
             <i class="fas fa-angle-right"></i>
+          </div>
+        </div>
+
+        <!-- LINEUP SECTION -->
+        <!-- Use grid layout  -->
+        <h2 class="mt-20">Lineup</h2>
+        <p>Follow the timetable and stage to ensure you don't miss your favourite artists</p>
+        <!-- wrapper div -->
+        <div class="rounded-lg relative mt-5 bg-zinc-800 py-4 px-2 text-zinc-200">
+          
+          <!-- Blue timeline line -->
+          <div class="absolute top-0 left-1/2 w-4 -ml-[8px] h-full rounded-full bg-gradient-to-b from-sky-900 via-cyan-900 to-teal-900">
+
+            <!-- pink dot -->
+            <div class="sticky top-1/2">
+              <div class="relative h-4 w-4 ">
+                <!-- Pin -->
+                <div class="absolute h-4 w-4 animate-ping rounded-full bg-pink-500 opacity-75"></div>
+                <!-- Pulsing effect -->
+                <div class="bg-rose-500 rounded-full relative h-4 w-4"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- lineup data -->
+          <div class="grid grid-cols-2 gap-8">
+
+            <!-- row 1 -->
+            <div>
+              <h4 class="p-2 bg-zinc-900 rounded-lg my-4">1st July</h4>
+            </div>
+            <div></div>
+
+            <!-- row 2 -->
+            <div class="text-right">
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - Sage Stage</div>
+            </div>
+            <div></div>
+
+            <!-- row 3 -->
+            <div></div>
+            <div>
+              <div class="font-bold">Jennifer Connelly</div>
+              <div class="text-zinc-400">7pm - Platform 9 &frac34;</div>
+            </div>
+
+            <!-- row 4 -->
+            <div class="text-right">
+              <div class="font-bold">The Slimy Diamonds</div>
+              <div class="text-zinc-400">8pm - Main Stage</div>
+            </div>
+            <div></div>
+
+            <!-- row 5 -->
+            <div></div>
+            <div>
+              <div class="font-bold">Corduroy Gary</div>
+              <div class="text-zinc-400">9pm -  Main Stage</div>
+            </div>
+            
+            <!-- New date -->
+            <!-- row 6 -->
+            <div>
+              <h4 class="p-2 bg-zinc-900 rounded-lg my-4">2nd July</h4>
+            </div>
+            <div></div>
+
+            <!-- row 7 -->
+            <div class="text-right">
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - Sage Stage</div>
+            </div>
+            <div></div>
+
+            <!-- row 8 -->
+            <div></div>
+            <div>
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - Sage Stage</div>
+            </div>
+
           </div>
         </div>
 
