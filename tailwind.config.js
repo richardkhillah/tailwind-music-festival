@@ -29,5 +29,6 @@ module.exports = {
     require("./plugins/openVarient"),
     require("./plugins/animationDelay"),
     require("./plugins/tableCaption"),
+    require("./plugins/buttonPlugin"),
   ],
 };
