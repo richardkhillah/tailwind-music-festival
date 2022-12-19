@@ -597,11 +597,6 @@ h6{
   border-radius: 0.5rem;
 }
 
-.btn-rose-900{
-  background-color: #881337;
-  color: white;
-}
-
 .btn-\[\#000\]{
   background-color: #000;
   color: white;
@@ -1331,6 +1326,10 @@ h6{
 .hover\:shadow-black\/20:hover{
   --tw-shadow-color: rgb(0 0 0 / 0.2);
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.focus\:outline-1:focus{
+  outline-width: 1px;
 }
 
 .group:hover .group-hover\:block{
