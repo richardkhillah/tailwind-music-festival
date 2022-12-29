@@ -1293,6 +1293,10 @@ h6{
   caption-side: bottom;
 }
 
+.outline-solid{
+  outline-style: solid;
+}
+
 /* Base styles should only target html tags */
 
 /* Menu-item styling. Last resort because no front-end packaging
@@ -1330,6 +1334,14 @@ h6{
 
 .focus\:outline-1:focus{
   outline-width: 1px;
+}
+
+.focus\:outline-2:focus{
+  outline-width: 2px;
+}
+
+.focus\:outline-solid:focus{
+  outline-style: solid;
 }
 
 .group:hover .group-hover\:block{
